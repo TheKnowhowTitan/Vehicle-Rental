@@ -16,7 +16,7 @@ public class Branch {
     public boolean addVehicle(String vehicleType, String vehicleId, int price) {
         if(!vehicleTypePresent(vehicleType))
             return false;
-        if(!vehicleIdPresent(vehicleId))
+        if(vehicleIdPresent(vehicleId))
             return false;
         Vehicle newVehicle = new Vehicle(vehicleType, vehicleId, price);
         vehicles.put(vehicleId, newVehicle);
